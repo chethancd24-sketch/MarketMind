@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. Dark mode (Primary) -->
+    <style name="Base.Theme.Marketmind" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/accent_blue_alpha20</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+
+        <item name="android:colorBackground">@color/bg_dark</item>
+        <item name="colorSurface">@color/surface_card_dark</item>
+        <item name="colorOnSurface">@color/text_primary_dark</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary_dark</item>
+
+        <!-- Custom Theme Attributes -->
+        <item name="colorCardBackground">@color/surface_card_dark</item>
+        <item name="colorCardElevated">@color/surface_elevated_dark</item>
+        <item name="colorCardStroke">@color/stroke_dark</item>
+
+        <item name="colorRiskLow">@color/risk_low</item>
+        <item name="colorRiskModerate">@color/risk_moderate</item>
+        <item name="colorRiskHigh">@color/risk_high</item>
+        <item name="colorRiskCritical">@color/risk_critical</item>
+
+        <item name="colorAssetEquity">@color/asset_equity</item>
+        <item name="colorAssetGold">@color/asset_gold</item>
+        <item name="colorAssetBonds">@color/asset_bonds</item>
+
+        <item name="colorStatusOnline">@color/status_online</item>
+        <item name="colorStatusStale">@color/status_stale</item>
+        <item name="colorStatusOffline">@color/status_offline</item>
+
+        <item name="colorSkeletonBase">@color/skeleton_base_dark</item>
+    </style>
+</resources>

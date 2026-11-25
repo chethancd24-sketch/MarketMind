@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MarketMind</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_portfolio">Portfolio</string>
+    <string name="nav_analytics">Analytics</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Header & Common Status -->
+    <string name="dashboard_title">Market Dashboard</string>
+    <string name="dashboard_subtitle">AI Crisis Detection &amp; Regimes</string>
+    <string name="status_connected">Connected</string>
+    <string name="status_offline">Offline</string>
+    <string name="status_stale">Cached - %1$s</string>
+    <string name="status_updating">Updating…</string>
+    <string name="last_updated">As of %1$s</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_retry">Retry Connection</string>
+    <string name="action_save">Save Settings</string>
+    <string name="action_test_connection">Test Connection</string>
+    <string name="action_go_to_settings">Configure Backend</string>
+    <string name="action_expand">Show Explanation</string>
+    <string name="action_collapse">Hide Explanation</string>
+
+    <!-- Risk Gauge Section -->
+    <string name="risk_gauge_title">Market Risk Index</string>
+    <string name="risk_level_low">Low Risk</string>
+    <string name="risk_level_moderate">Moderate Risk</string>
+    <string name="risk_level_high">Elevated Risk</string>
+    <string name="risk_level_critical">Critical Risk</string>
+    <string name="risk_probability_format">%1$.1f%%</string>
+    <string name="risk_no_data">Waiting for market risk data</string>
+
+    <!-- Regime Section -->
+    <string name="regime_title">Market Regime Detection</string>
+    <string name="regime_hmm_label">HMM Model State</string>
+    <string name="regime_calm">Calm Market</string>
+    <string name="regime_volatile">Volatile Market</string>
+    <string name="regime_bearish">Bearish Downtrend</string>
+    <string name="regime_confidence_format">Confidence: %1$.0f%%</string>
+    <string name="regime_desc_calm">Low volatility environment with stable upward momentum across major indices.</string>
+    <string name="regime_desc_volatile">Elevated price fluctuations and macro uncertainty across asset classes.</string>
+    <string name="regime_desc_bearish">Sustained downward momentum with systemic market risk signals.</string>
+
+    <!-- Market Overview -->
+    <string name="market_overview_title">Asset Watchlist</string>
+    <string name="asset_nifty50">NIFTY 50</string>
+    <string name="asset_gold">Gold ETF</string>
+    <string name="asset_bonds">10Y Bond Proxy</string>
+
+    <!-- Risk Chart -->
+    <string name="historical_risk_title">Historical Risk Probability</string>
+    <string name="historical_risk_subtitle">LSTM 30-Day Probability Trend</string>
+    <string name="chart_touch_hint">Touch chart to inspect probability values</string>
+    <string name="chart_empty_risk">No historical risk data available.</string>
+
+    <!-- Portfolio Screen -->
+    <string name="portfolio_title">Portfolio Adjuster</string>
+    <string name="portfolio_subtitle">Model Suggested Allocation</string>
+    <string name="portfolio_summary_title">Allocation Summary</string>
+    <string name="current_allocation">Current Allocation</string>
+    <string name="suggested_allocation">Suggested Allocation</string>
+    <string name="allocation_comparison">Allocation Adjustment Matrix</string>
+    <string name="col_asset">Asset Class</string>
+    <string name="col_current">Current</string>
+    <string name="col_suggested">Suggested</string>
+    <string name="col_difference">Difference</string>
+    <string name="recommendation_explanation_title">Model Adjustment Rationale</string>
+    <string name="risk_indicators_title">Portfolio Risk Exposure</string>
+
+    <!-- Analytics Screen -->
+    <string name="analytics_title">Performance &amp; Analytics</string>
+    <string name="analytics_subtitle">Risk Metrics &amp; Historical Performance</string>
+    <string name="performance_chart_title">Cumulative Portfolio Return</string>
+    <string name="benchmark_comparison_title">Portfolio vs NIFTY 50 Benchmark</string>
+    <string name="risk_metrics_title">Risk &amp; Return Metrics</string>
+    <string name="metric_sharpe">Sharpe Ratio</string>
+    <string name="metric_max_drawdown">Max Drawdown</string>
+    <string name="metric_volatility">Annualized Volatility</string>
+    <string name="regime_history_title">Historical Regime Timeline</string>
+    <string name="performance_insights_title">Analytics Insights</string>
+    <string name="analytics_empty">No historical analytics available.\nConnect to backend service to load model performance.</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Backend &amp; App Configuration</string>
+    <string name="settings_connection_section">Server Connection</string>
+    <string name="settings_connection_url_label">Backend Base URL</string>
+    <string name="settings_connection_url_hint">http://10.0.2.2:8000/</string>
+    <string name="settings_refresh_section">Data Refresh Settings</string>
+    <string name="settings_auto_refresh">Background Auto-Refresh</string>
+    <string name="settings_app_info">Application Details</string>
+    <string name="settings_app_version">Version 1.0.0 (Build 1)</string>
+    <string name="settings_disclaimer_title">Academic Prototype Disclaimer</string>
+    <string name="settings_disclaimer">This application is an academic research prototype. Market risk predictions and portfolio allocation suggestions are model-generated estimates, not guaranteed outcomes or personal financial advice.</string>
+    <string name="settings_disclaimer_compact">Model-generated estimate • Academic prototype • Not financial advice</string>
+
+    <!-- Error States -->
+    <string name="error_no_internet_title">No Internet Connection</string>
+    <string name="error_no_internet_msg">Unable to connect to network. Displaying last saved data from cache.</string>
+    <string name="error_timeout_title">Server Request Timed Out</string>
+    <string name="error_timeout_msg">The backend server took too long to respond. Tap Retry to attempt again.</string>
+    <string name="error_backend_unavailable_title">Server Unavailable (5xx)</string>
+    <string name="error_backend_unavailable_msg">The market risk service is currently unreachable. Please check backend URL in Settings.</string>
+    <string name="error_api_error_title">API Response Error</string>
+    <string name="error_api_error_msg">The server returned an invalid request response (%1$s).</string>
+    <string name="error_parse_error_title">Data Format Error</string>
+    <string name="error_parse_error_msg">Received an unexpected data format from backend API.</string>
+    <string name="error_empty_title">No Data Available</string>
+    <string name="error_empty_msg">Connect to backend server to load real market predictions.</string>
+
+    <!-- Time Period Chips -->
+    <string name="period_1m">1M</string>
+    <string name="period_3m">3M</string>
+    <string name="period_6m">6M</string>
+    <string name="period_1y">1Y</string>
+    <string name="period_all">ALL</string>
+</resources>

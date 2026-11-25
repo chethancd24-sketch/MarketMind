@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorCardBackground" format="color" />
+    <attr name="colorCardElevated" format="color" />
+    <attr name="colorCardStroke" format="color" />
+
+    <attr name="colorRiskLow" format="color" />
+    <attr name="colorRiskModerate" format="color" />
+    <attr name="colorRiskHigh" format="color" />
+    <attr name="colorRiskCritical" format="color" />
+
+    <attr name="colorAssetEquity" format="color" />
+    <attr name="colorAssetGold" format="color" />
+    <attr name="colorAssetBonds" format="color" />
+
+    <attr name="colorStatusOnline" format="color" />
+    <attr name="colorStatusStale" format="color" />
+    <attr name="colorStatusOffline" format="color" />
+
+    <attr name="colorSkeletonBase" format="color" />
+</resources>
