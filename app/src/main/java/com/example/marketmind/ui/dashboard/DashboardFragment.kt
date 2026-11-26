@@ -136,11 +136,11 @@ class DashboardFragment : Fragment() {
         if (isOnline) {
             binding.tvConnectionChip.text = getString(R.string.status_connected)
             binding.tvConnectionChip.setTextColor(ContextCompat.getColor(requireContext(), R.color.status_online))
-            binding.tvConnectionChip.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_check_circle, 0, 0, 0)
+            binding.tvConnectionChip.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
         } else {
             binding.tvConnectionChip.text = getString(R.string.status_offline)
             binding.tvConnectionChip.setTextColor(ContextCompat.getColor(requireContext(), R.color.status_offline))
-            binding.tvConnectionChip.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_wifi_off, 0, 0, 0)
+            binding.tvConnectionChip.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
         }
     }
 

@@ -87,8 +87,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/spacing_8dp"
                 android:background="@drawable/bg_status_chip"
-                android:drawableStart="@drawable/ic_check_circle"
-                android:drawablePadding="4dp"
                 android:paddingHorizontal="@dimen/spacing_8dp"
                 android:paddingVertical="@dimen/spacing_4dp"
                 android:textAppearance="?attr/textAppearanceLabelSmall"
