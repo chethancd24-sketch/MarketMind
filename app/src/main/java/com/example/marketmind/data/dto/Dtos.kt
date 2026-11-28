@@ -2,6 +2,10 @@ package com.example.marketmind.data.dto
 
 import com.google.gson.annotations.SerializedName
 
+data class HealthDto(
+    @SerializedName("status") val status: String? = null
+)
+
 /**
  * Backend response DTO for GET /predict-risk
  * All fields nullable to handle contract changes gracefully.

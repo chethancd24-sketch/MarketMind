@@ -1,6 +1,8 @@
 package com.example.marketmind.data.cache
 
 import android.content.Context
+import android.content.pm.ApplicationInfo
+import android.os.Build
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
@@ -16,13 +18,38 @@ class SettingsDataStore(private val context: Context) {
 
     companion object {
         const val DEFAULT_BASE_URL = "http://10.0.2.2:8000/"
+        const val USB_REVERSED_BASE_URL = "http://127.0.0.1:8000/"
         val KEY_BASE_URL = stringPreferencesKey("base_url")
         val KEY_AUTO_REFRESH = booleanPreferencesKey("auto_refresh")
         val KEY_DEMO_MODE = booleanPreferencesKey("demo_mode")
+
+        internal fun resolveBaseUrl(
+            savedUrl: String?,
+            isDebuggable: Boolean,
+            isEmulator: Boolean
+        ): String {
+            val configuredUrl = savedUrl ?: DEFAULT_BASE_URL
+            return if (
+                isDebuggable &&
+                !isEmulator &&
+                configuredUrl.trimEnd('/') == DEFAULT_BASE_URL.trimEnd('/')
+            ) {
+                USB_REVERSED_BASE_URL
+            } else {
+                configuredUrl
+            }
+        }
     }
 
     val baseUrl: Flow<String> = context.settingsDataStore.data.map { preferences ->
-        preferences[KEY_BASE_URL] ?: DEFAULT_BASE_URL
+        resolveBaseUrl(
+            savedUrl = preferences[KEY_BASE_URL],
+            isDebuggable = context.applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE != 0,
+            isEmulator = Build.FINGERPRINT.startsWith("generic") ||
+                Build.MODEL.contains("Emulator", ignoreCase = true) ||
+                Build.HARDWARE == "goldfish" ||
+                Build.HARDWARE == "ranchu"
+        )
     }
 
     val autoRefresh: Flow<Boolean> = context.settingsDataStore.data.map { preferences ->

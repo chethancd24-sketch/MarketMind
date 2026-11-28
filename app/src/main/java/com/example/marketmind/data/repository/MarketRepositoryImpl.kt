@@ -335,9 +335,11 @@ class MarketRepositoryImpl(
     override suspend fun testConnection(baseUrl: String): Pair<Boolean, String> {
         return try {
             val service = ApiClient.createApiService(baseUrl)
-            val response = service.getPredictRisk()
-            if (response.isSuccessful) {
+            val response = service.getHealth()
+            if (response.isSuccessful && response.body()?.status == "ok") {
                 Pair(true, "Connected successfully (HTTP ${response.code()})")
+            } else if (response.isSuccessful) {
+                Pair(false, "Backend health check returned an invalid response.")
             } else {
                 Pair(false, "Server error (HTTP ${response.code()})")
             }

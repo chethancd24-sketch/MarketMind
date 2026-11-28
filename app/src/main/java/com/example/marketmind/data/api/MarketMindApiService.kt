@@ -6,6 +6,9 @@ import retrofit2.http.GET
 
 interface MarketMindApiService {
 
+    @GET("health")
+    suspend fun getHealth(): Response<HealthDto>
+
     @GET("predict-risk")
     suspend fun getPredictRisk(): Response<RiskDto>
 

@@ -55,6 +55,14 @@ Endpoints:
 
 The GET portfolio endpoint uses a disclosed 60/20/20 benchmark as its comparison baseline, not a claim about a user's actual holdings. The Android app defaults to live backend mode; sample data is available only when Demo Mode is explicitly enabled. Set the backend URL in Settings (Android emulator default: `http://10.0.2.2:8000/`).
 
+For a physical Android phone connected to this development computer by USB, keep the API running and enable ADB port forwarding:
+
+```powershell
+adb reverse tcp:8000 tcp:8000
+```
+
+Debug builds on physical devices translate the untouched emulator default to `http://127.0.0.1:8000/` for this USB-forwarded setup. Emulators continue to use `http://10.0.2.2:8000/`. If you choose a custom URL in Settings, it is used as entered.
+
 ## Android authentication setup
 
 The Android sign-in and account-creation forms use Firebase Authentication with email/password and Google sign-in through Android Credential Manager. In the Firebase console:
